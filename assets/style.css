@@ -12,10 +12,28 @@ body, html, .mainBody {
     padding: 70px 0;
 }
 
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    height: 20px;
+    width: 20px;
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    background-color: aqua;
+  }
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
 .buttonscrollpost{
- margin-bottom: 0%;
- position: relative;
- size: 3%;
+
 }
 
 .blur {
@@ -29,6 +47,10 @@ body, html, .mainBody {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.border-blur {
+    box-shadow: inset 0px 0px 40px 40px #DBA632;
 }
 
 .gamecontent{
@@ -54,7 +76,7 @@ body, html, .mainBody {
 }
 
 #section1 {
-    background-color: antiquewhite;
+    background-color: transparent;
 }
 
 #section2 {  
@@ -65,6 +87,20 @@ body, html, .mainBody {
 }
 
 #section3 {
+    background-image: url('/images/game-background.avif');
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+}
+
+#section4 {
+    background-image: url('/images/game-background.avif');
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+}
+
+#section5 {
     background-image: url('/images/game-background.avif');
     background-repeat: no-repeat;
     height: 100%;
