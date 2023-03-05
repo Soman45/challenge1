@@ -5,6 +5,13 @@ body, html, .mainBody {
     background-size: cover;
 }
 
+h1, h2, h3, h4, p {
+    color: #DBA632;
+}
+.text {
+color: #DBA632;
+}
+
 .text-align-center {
     font-size: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -113,4 +120,10 @@ body, html, .mainBody {
 
 .character-section {
     background-size: 50%;
+}
+
+footer {
+    background-color: black;
+    width: 100%;
+    height: 300px;
 }
