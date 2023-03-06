@@ -5,7 +5,7 @@ body, html, .mainBody {
     background-size: cover;
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, h6, p {
     color: #DBA632;
 }
 
@@ -57,8 +57,7 @@ font-weight: bold;
     -webkit-transform: rotate(45deg);
   }
 
-
-.blur {
+  .blur {
     background-image: url('/images/game-background.avif');
   /* Add the blur effect */
   filter: blur(8px);
@@ -75,6 +74,10 @@ font-weight: bold;
     box-shadow: inset 0px 0px 40px 40px #5a4a2b;
 }
 
+.image-section3 {
+    height: 50%;
+    width: 900px;
+}
 .gamecontent{
     flex-direction: row;
     text-align: center;
@@ -89,7 +92,7 @@ font-weight: bold;
     border: 3px solid #f1f1f1;
     transform: translate(-50%, -50%);
     -index: 2;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
     width: 500px;
     left: 50%;
@@ -169,11 +172,14 @@ footer {
     flex-wrap: wrap;
   } */
 
-@media screen and(max-width:900px) {
+@media screen and(min-width:900px) {
     .sm-screen{
         flex-direction: column;
         max-width: 50%;
-        
+     }
+    .border-blur {
+        box-shadow: inset 0px 0px 40px 40px #5a4a2b;
+        flex-direction: column;   
     }
     
 }
