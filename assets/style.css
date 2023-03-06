@@ -23,14 +23,14 @@ font-weight: bold;
     font-size: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
-    padding: 220px 0;
+    padding: 210px 0;
 }
 
 .center-bottom {
     flex-direction: column;
     bottom: 0px;
     position: relative;
-    padding-left: 50%;
+    padding-left: 48%;
 }
 
 .text-arrow {
