@@ -78,7 +78,7 @@ font-weight: bold;
 .gamecontent{
     flex-direction: row;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 .carpos {
@@ -93,7 +93,7 @@ font-weight: bold;
     text-align: center;
     width: 500px;
     left: 50%;
-    margin-top: 15%;
+    margin-top: 150px;
 }
 
 .scroll {
