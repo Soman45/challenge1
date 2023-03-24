@@ -1,5 +1,5 @@
 body, html, .mainBody {
-    background-image: url('/images/game-background.avif');
+    background-image: url('/assets/main-bg.jpg');
     background-repeat: no-repeat;
     height: 100%;
     background-size: cover;
@@ -58,7 +58,7 @@ font-weight: bold;
   }
 
   .blur {
-    background-image: url('/images/game-background.avif');
+    background-image: url('/assets/the-games-bg.jpg');
   /* Add the blur effect */
   filter: blur(8px);
   -webkit-filter: blur(8px);
@@ -72,6 +72,9 @@ font-weight: bold;
 
 .border-blur {
     box-shadow: inset 0px 0px 40px 40px #5a4a2b;
+    height: 500px;
+    width: 700px;
+    right: 0;
 }
 
 .image-section3 {
@@ -112,30 +115,38 @@ font-weight: bold;
 }
 
 #section2 {  
-    background-image: url('/images/game-background.avif');
+    background-image: url('/assets/the-games-bg.jpg');
     background-repeat: no-repeat;
     height: 100%;
     background-size: cover;
 }
 
 #section3 {
-    background-image: url('/images/game-background.avif');
+    background-image: url('/assets/features.jpg');
     background-repeat: no-repeat;
     height: 100%;
     background-size: cover;
 }
 
 #section4 {
-    background-image: url('/images/game-background.avif');
+    background-image: url('/assets/requirements.png');
     background-repeat: no-repeat;
     height: 100%;
     background-size: cover;
 }
 
 #section5 {
-    background-image: url('/images/game-background.avif');
+    background-image: url('/assets/the-games-bg.jpg');
     background-repeat: no-repeat;
     height: 100%;
+    background-size: cover;
+}
+
+#section6 {
+    background-image: url('/assets/skull.png');
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
     background-size: cover;
 }
 
