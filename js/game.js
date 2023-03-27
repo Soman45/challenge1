@@ -8,7 +8,6 @@ function game() {
 		const rockBtn = document.querySelector('.rock');
 		const paperBtn = document.querySelector('.paper');
 		const scissorBtn = document.querySelector('.scissor');
-		const result = document.querySelector('.result');
 		const playerOptions = [rockBtn,paperBtn,scissorBtn];
 		const computerOptions = ['rock','paper','scissors']
 		
