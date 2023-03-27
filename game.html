@@ -10,36 +10,32 @@
 	<link rel="stylesheet" href="./css/game.css">
 	<title>Rock Paper Scissor</title>
 </head>
-<body>
+<body class="background">
+	<a href="index.html">Kembali</a>
 	<section class="game">
 		<!--Title -->
 		<div class="title">Rock Paper Scissor</div>
 		
 		<!--Display Score of player and computer -->
-		<div class="score">
-			<div class="playerScore">
-				<h2>Player</h2>
-				<p class="p-count count">0</p>
-
-			</div>	
-			<div class="computerScore">
-				<h2>Computer</h2>
-				<p class="c-count count">0</p>
-
-			</div>
-		</div>
-		
-		<div class="move">Choose your move</div>
-		
-		<!--Number of moves left before game ends -->
-		<div class="movesleft">Moves Left: 10 </div>
-		
-		<!--Options available to player to play game -->
-		<div class="options">
-			<button class="rock">Rock</button>
-			<button class="paper">Paper</button>
-			<button class="scissor">Scissors</button>	
-		</div>
+		<div class="score"></div>
+        <div class="grid-container" >
+            <!--Options available to player to play game -->
+                <div class="options grid-item" >
+					<h1 class="move">Choose your move</h1> 
+                    <button class="rock"><img src="/assets/batu.png" alt="" class="image"></button>
+                    <button class="paper"><img src="/assets/kertas.png" alt="" class="image"></button>
+                    <button class="scissor" ><img src="/assets/gunting.png" alt="" class="image"></button>	
+                </div>
+            
+			<!--Options available to player to play game -->
+				<div class="options grid-item">
+					<h1 class="move">Computer</h1>
+					<button class="rockcom"><img src="/assets/batu.png" alt="" class="image"></button>
+					<button class="papercom"><img src="/assets/kertas.png" alt="" class="image"></button>
+					<button class="scissorcom"><img src="/assets/gunting.png" alt="" class="image"></button>	
+				</div>
+        </div>
+        </div>
 		
 		<!--Final result of game -->
 		<div class="result"></div>
