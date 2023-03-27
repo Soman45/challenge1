@@ -147,7 +147,8 @@ font-weight: bold;
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
-    background-size: cover;
+    background-size:fit-content;
+    background-color: black;
 }
 
 .character-section {

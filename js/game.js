@@ -4,7 +4,6 @@ function game() {
 	let moves = 0;
 
 
-	// Function to
 	function playGame(){
 		const rockBtn = document.querySelector('.rock');
 		const paperBtn = document.querySelector('.paper');
@@ -13,23 +12,23 @@ function game() {
 		const playerOptions = [rockBtn,paperBtn,scissorBtn];
 		const computerOptions = ['rock','paper','scissors']
 		
-		// Function to start playing game
-		playerOptions.forEach(option => {
+		// Function untuk main Game
+		playerOptions.forEach(function (option)  {
 			option.addEventListener('click',function (){
 				
-				const movesLeft = document.querySelector('.movesleft');
+				// const movesLeft = document.querySelector('.sisa');
 				moves++;
 				
 				const choiceNumber = Math.floor(Math.random()*3);
 				const computerChoice = computerOptions[choiceNumber];
 				console.log(computerChoice)
 				
-				// Fungsi untuk menentukan pemenang
+				// Function untuk menentukan pemenang
 				winner(this.innerText,computerChoice)
 				console.log(winner(this.innerText,computerChoice))
 				
 				if(moves == 1){
-					gameOver(playerOptions,movesLeft);
+					gameOver(playerOptions);
 				}
 
 			})
@@ -37,55 +36,50 @@ function game() {
 		
 	}
 
-	// Function to decide winner
 	function winner (player,computer) {
+		const rockBtn = document.querySelector('.rock');
+		const paperBtn = document.querySelector('.paper');
+		const scissorBtn = document.querySelector('.scissor');
+		const rockComBtn = document.querySelector('.rockcom');
+		const paperComBtn = document.querySelector('.papercom');
+		const scissorComBtn = document.querySelector('.scissorcom');
 		const result = document.querySelector('.result');
-		const reloadBtn = document.querySelector('.reload');
-		player = player.toLowerCase();
-        computer = computer.toLowerCase();
-		// if(player === computer){
-		// 	result.textContent = 'Tie'
-		// }
+		// player = player.toLowerCase();
+        // computer = computer.toLowerCase();
+		if(player === computer){
+			result.textContent = 'Seri'
+		}
 		 if(player == 'rock'){
+			rockBtn.style.color = "red";
 			if(computer == 'paper'){
+				paperComBtn.style.color = "red";
 				computerScore++;
 				console.log('Computer Menang')
-			}else if( computer == 'scissors'){
+			}else{
 				playerScore++;
 				console.log('Player Menang')
-			}else {
-				result.style.fontSize = '2rem';
-				result.innerText = 'Seri';
-				result.style.color = 'grey'
-        	    console.log("Seri")
 			}
 		}
 		else if(player == 'scissors'){
+			scissorBtn.style.color = "red";
 			if(computer == 'rock'){
+				rockComBtn.style.color = "red";
 				computerScore++;
 				console.log('Computer Menang')
-			}else if(computer == 'paper'){
+			}else{
 				playerScore++;
 				console.log('Player Menang')
-			}else {
-				result.style.fontSize = '2rem';
-				result.innerText = 'Seri';
-				result.style.color = 'grey'
-        	    console.log("Seri")
 			}
 		}
 		else if(player == 'paper'){
+			paperBtn.style.color = "red";
 			if(computer == 'scissors'){
+				scissorComBtn.style.color = "red";
 				computerScore++;
 				console.log('Computer Menang')
-			}else if(computer=='rock'){
+			}else{
 				playerScore++;
 				console.log('Player Menang')
-			}else{
-				result.style.fontSize = '2rem';
-				result.innerText = 'Seri';
-				result.style.color = 'grey'
-        	    console.log("Seri")
 			}
 		}
 		// reloadBtn.innerText = 'Restart';
@@ -118,16 +112,15 @@ function game() {
 			result.style.color = 'grey';
 			console.log('Seri')
 		}
-		reloadBtn.innerText = 'Restart';
+		reloadBtn.innerHTML = '<img src="/assets/refresh.png" alt="" style="width:20px; height:20px;">';
 		reloadBtn.style.display = 'flex'
 		reloadBtn.addEventListener('click',() => {
 			window.location.reload();
 		})
 	}
-	// Calling playGame function inside game
+	
 	playGame();
 	
 }
 
-// Calling the game function
 game();
