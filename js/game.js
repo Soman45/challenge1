@@ -20,6 +20,7 @@ function game() {
 				
 				const choiceNumber = Math.floor(Math.random()*3);
 				const computerChoice = computerOptions[choiceNumber];
+				console.log(playerOptions)
 				console.log(computerChoice)
 				
 				// Function untuk menentukan pemenang
