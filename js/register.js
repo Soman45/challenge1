@@ -4,7 +4,7 @@ const Router = express.Router();
 
 //CATATAN!!!!
 //Kalo mau nambahin data lewat page ejs-nya maka req.query atau yang berhubungan harus di-comment
-//Kalo mau nambahin data lewat page query-nya maka req.body atau yang berhubungan harus di-comment
+//Kalo mau nambahin data lewat POSTMAN query-nya maka req.body atau yang berhubungan harus di-comment
 
 Router.post('/users', (req, res) => {
   if (!req.body.nama || !req.body.email || !req.body.password) {
