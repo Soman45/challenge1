@@ -1,5 +1,5 @@
 const express = require('express');
-// const fs = require('fs');
+const fs = require('fs');
 const app = express();
 const user = require('./db/register.json');
 const bodyParser = require('body-parser');
@@ -18,6 +18,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
+
 //ROUTE HALAMAN
 app.get('/home', (req, res)=>{
     res.render(__dirname+'/views/index')
@@ -31,14 +32,26 @@ app.get('/register', (req, res)=>{
     res.render(__dirname+'/views/register')
 });
 
+app.get('/login', (req, res)=>{
+    res.render(__dirname+'/views/login')
+});
 
 //REGISTER
 const router = require('./js/register');
 app.use(router);
 
-app.get('/register', (req, res) => {
-    res.render('register', { user });
-  });
+// app.get('/register', (req, res) => {
+//     res.render('register', { user });
+// });
+
+
+//LOGIN
+const login = require('./js/login');
+app.use(login);
+
+// app.get('/login', (req, res) => {
+//     res.render(__dirname +'/views/login');
+//   });
   
  
 

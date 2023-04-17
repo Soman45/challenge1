@@ -1,20 +1,25 @@
 {
   "users": [
     {
-      "nama": "John Doe",
-      "email": "johndoe@example.com",
-      "password": "123456"
-    },
-    {
-      "nama": "Jane Doe",
-      "email": "janedoe@example.com",
+      "nama": "Mufakir",
+      "email": "dudungxample.com",
       "password": "abcdef"
     },
     {
-      "nama": "New User",
+      "nama": "NewUser",
       "email": "newuser@example.com",
-      "password": "qwerty"
+      "password": "random"
+    },
+    {
+      "nama": "budi",
+      "email": "Abdul@example.com",
+      "password": "password"
+    },
+    {
+      "nama": "andi",
+      "email": "andi@example.com",
+      "password": "andi"
     }
   ]
    
-  }
+}
