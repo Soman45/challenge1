@@ -7,27 +7,28 @@ const Router = express.Router();
 //Kalo mau nambahin data lewat page query-nya maka req.body atau yang berhubungan harus di-comment
 
 Router.post('/users', (req, res) => {
-  // if (!req.body.nama || !req.body.email || !req.body.password) {
-  //   res.status(400).json({ error: "Data harus diisi" });
-  //   return;
-  // } 
-  if (!req.query.nama || !req.query.email || !req.query.password) {
+  if (!req.body.nama || !req.body.email || !req.body.password) {
     res.status(400).json({ error: "Data harus diisi" });
     return;
   } 
+  // if (!req.query.nama || !req.query.email || !req.query.password) {
+  //   res.status(400).json({ error: "Data harus diisi" });
+  //   return;
+  // } 
+
     // Add new user data to the JSON data
-    // const newUser = {
-    //   nama: req.body.nama,
-    //   email: req.body.email,
-    //   password: req.body.password
-    // };
-    const newQuery = {
-      nama: req.query.nama,
-      email: req.query.email,
-      password: req.query.password
+    const newUser = {
+      nama: req.body.nama,
+      email: req.body.email,
+      password: req.body.password
     };
-    user.users.push(newQuery);
-    // user.users.push(newUser);
+    // const newQuery = {
+    //   nama: req.query.nama,
+    //   email: req.query.email,
+    //   password: req.query.password
+    // };
+    // user.users.push(newQuery);
+    user.users.push(newUser);
     res.json(user);
   });
 
