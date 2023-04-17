@@ -9,7 +9,7 @@ function game() {
 		const paperBtn = document.querySelector('.paper');
 		const scissorBtn = document.querySelector('.scissor');
 		const playerOptions = [rockBtn,paperBtn,scissorBtn];
-		const computerOptions = ['rock','paper','scissors']
+		const computerOptions = ['rock','paper','scissors'];
 		
 		// Function untuk main Game
 		playerOptions.forEach(function (option)  {
@@ -18,7 +18,7 @@ function game() {
 				// const movesLeft = document.querySelector('.sisa');
 				moves++;
 				
-				const choiceNumber = Math.floor(Math.random()*3);
+				const choiceNumber = Math.floor(Math.random()*6);
 				const computerChoice = computerOptions[choiceNumber];
 				console.log(playerOptions)
 				console.log(computerChoice)

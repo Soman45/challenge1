@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "nama": "John Doe",
+      "email": "johndoe@example.com",
+      "password": "123456"
+    },
+    {
+      "nama": "Jane Doe",
+      "email": "janedoe@example.com",
+      "password": "abcdef"
+    },
+    {
+      "nama": "New User",
+      "email": "newuser@example.com",
+      "password": "qwerty"
+    }
+  ]
+   
+  }
