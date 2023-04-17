@@ -36,6 +36,8 @@ app.get('/login', (req, res)=>{
     res.render(__dirname+'/views/login')
 });
 
+
+
 //REGISTER
 const router = require('./js/register');
 app.use(router);
@@ -53,7 +55,9 @@ app.use(login);
 //     res.render(__dirname +'/views/login');
 //   });
   
- 
+app.use((req, res) => {
+    res.status(404).send("Page not found");
+  }); 
 
 
 const port = 3000
