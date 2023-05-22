@@ -1,24 +1,9 @@
 {
   "users": [
     {
-      "nama": "Mufakir",
-      "email": "dudungxample.com",
-      "password": "abcdef"
-    },
-    {
-      "nama": "NewUser",
-      "email": "newuser@example.com",
-      "password": "random"
-    },
-    {
-      "nama": "budi",
-      "email": "Abdul@example.com",
-      "password": "password"
-    },
-    {
-      "nama": "andi",
-      "email": "andi@example.com",
-      "password": "andi"
+      "nama": "dika",
+      "email": "dika@gmail.com",
+      "password": "dika"
     }
   ]
    

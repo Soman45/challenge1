@@ -74,22 +74,6 @@ app.get('/userlist', async function(req, res){
         user = user.map(function (data){
             return data.toJSON()
         })
-        //map data dari database menjadi string
-        // let customerDataString = '';
-        // customerData.forEach(function(data, index) {
-        //     customerDataString +=`
-        //     <tr>
-        //     <th scope="row">${index + 1}</th>
-        //     <td>${data.customerName}</td>
-        //     <td>
-        //       <button type="button" class="btn btn-primary">Detail</button>
-        //     </td>
-        //     <td>
-        //       <button type="button" class="btn btn-danger">Hapus</button>
-        //     </td>
-        //   </tr>
-        //     `
-        // });
         //tampilkan halaman
         res.render('crud', {datauser: user})
     }catch(error){
@@ -151,7 +135,7 @@ app.post('/user/add', async function (req, res) {
         }
         ]
       })
-      res.render('cu', {datauser: Data.toJSON(), isUpdate:true})
+      res.render('update', {datauser: Data.toJSON(), isUpdate:true})
     } catch(error) {
       await transaction.rollback();
       console.log(error)
@@ -188,7 +172,7 @@ app.post('/user/add', async function (req, res) {
       const id = req.query.id
       //update data
       await userhistory.destroy({where: {userId:id},  transaction }); 
-      await datauser.destroy({where:{id}},  transaction);
+      await datauser.destroy({where:{id},  transaction});
       await transaction.commit();
       // jika berhasil, redirect ke halaman utama
       res.redirect('/userlist');
