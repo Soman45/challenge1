@@ -14,19 +14,19 @@
         <div class="title">Welcome</div>
         <div class="subtitle">Let's create your account!</div>
         <div class="input-container ic1">
-          <input id="firstname" class="input" type="text" name="nama" placeholder=" " />
+          <input id="username" value="<%= datauser.username %>" class="input" type="text" name="nama" placeholder=" " />
           <div class="cut"></div>
           <label for="firstname" class="placeholder">Username</label>
         </div>
         <div class="input-container ic2">
-          <input id="lastname" class="input" type="text" name="email" placeholder=" " />
+          <input id="email" value="<%= datauser.email %>" class="input" type="text" name="email" placeholder=" " />
           <div class="cut"></div>
-          <label for="lastname" class="placeholder">Email</label>
+          <label for="email" class="placeholder">Email</label>
         </div>
         <div class="input-container ic2">
-          <input id="email" class="input" type="text" name="password" placeholder=" " />
+          <input id="password" value="<%= datauser.password %>" class="input" type="text" name="password" placeholder=" " />
           <div class="cut cut-short"></div>
-          <label for="email" class="placeholder">Password</label>
+          <label for="password" class="placeholder">Password</label>
         </div>
         <a href=""><button type="text" class="submit"> submit</button></a>        
       </div>

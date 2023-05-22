@@ -1,0 +1,23 @@
+{
+  "local": {
+    "username": "lrujdpzm",
+    "password": "0OVOSTFGP1_sJBU_L626s2mRveX5ZHBG",
+    "database": "lrujdpzm",
+    "host": "satao.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "lrujdpzm",
+    "password": "0OVOSTFGP1_sJBU_L626s2mRveX5ZHBG",
+    "database": "lrujdpzm",
+    "host": "satao.db.elephantsql.com",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
