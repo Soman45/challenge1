@@ -48,7 +48,6 @@ class game {
         const { code, playerName } = req.body;
 
         try {
-          // Find the fight room using the provided room code
           const fightRoom = await gameRoom.findOne({ where: { code } });
       
           if (!fightRoom) {
@@ -57,17 +56,14 @@ class game {
           }
       
           if (!fightRoom.playerOne) {
-            // If playerOne is not set, assign the current player as playerOne
             fightRoom.playerOne = playerName;
           } else if (!fightRoom.playerTwo) {
-            // If playerOne is already set, assign the current player as playerTwo
             fightRoom.playerTwo = playerName;
           } else {
-            // Both players are already assigned, handle the error
             return res.render('GamePage/joinRoom', { error: 'Room is already full' });
           }
       
-          // Save the updated fight room
+          
           await fightRoom.save();
       
           // Redirect the players to the game page
