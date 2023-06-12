@@ -121,6 +121,15 @@
 	height: 50px;
 	width: 50px;
 }
+.move-btn.selected {
+	background-color: #10e850; /* Add your desired color for selected moves */
+  }
+
+.selected-computer {
+	background-color: #ff0000; /* Add your desired color for the computer's chosen move */
+  }
+  
+  
 /* Responsive Design */
 @media screen and (max-width: 612px)
 {

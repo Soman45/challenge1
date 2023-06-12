@@ -6,53 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet"  href="/css/style.css">
-    <link rel="stylesheet"  href="/css/style.css">
     <title>Game</title>
 </head>
 <body> 
 <!--Section 1  -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="assets/icon.ico" alt="" style="width: 30px;"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#section1">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#footer">Work</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#footer">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#footer">About Me</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/loginadmin">Super Admin</a>
-                  </li>
-                    <li class="nav-item">
-                        <!-- <a class="nav-link active" aria-current="page" href="/register">Sign-Up</a> -->
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/login">Login User</a>
-                      </li>
-                </ul>
-            </form>
-          </div>
-        </div>
-      </nav>
+<%- include('navbarAfterLogin') %>
 <div class="mainBody" id="section1">
   <div class="text-align-center">
     <h1 >PLAY TRADITIONAL GAME</h1>
     <h2>Experience New Wonderful Experience</h2>
-    <button type="button" class="btn btn-warning play-now"> <a href="/game"> Trial Now</a></button>
+    <h3>Hi, <%= username %></h3>
+    <button type="button" class="btn btn-warning play-now"> <a href="/gameUser"> Trial Now</a></button>
+    <button type="button" class="btn btn-warning play-now"> <a href="/create-room"> Create Room</a></button>
+    <button type="button" class="btn btn-warning play-now"> <a href="/join-room"> Join Room</a></button>
   </div>
   <div class="center-bottom text-arrow">
     <p>Next</p>

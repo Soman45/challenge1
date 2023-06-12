@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet"  href="/css/style.css">
+    <title>Game</title>
+</head>
+<body> 
+<!--Section 1  -->
+<%- include('navbar') %>
+<div class="mainBody" id="section1">
+  <div class="text-align-center">
+    <h1 >PLAY TRADITIONAL GAME</h1>
+    <h2>Experience New Wonderful Experience</h2>
+    <button type="button" class="btn btn-warning play-now"> <a href="/game"> Trial Now</a></button>
+  </div>
+  <div class="center-bottom text-arrow">
+    <p>Next</p>
+    <a href="#section2"><i class="arrow down"></i></a> 
+  </div>
+
+</div>      
+
+<!--  Section 2 -->
+    <div class="sm-screen row-section2" id="section2">
+        <div class="gamecontent d-flex flex-column mb-3">
+          <h1>What's so special?</h1>
+          <h1>THE GAMEPLAY</h1>
+          <p>Game memiliki gameplay yang memudahkan pemain untuk menjelajahi dunia.</p>
+          <div id="carouselExampleControls" class="carousel slide carpos d-flex flex-column mb-3" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/images/gameplay1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/images/gameplay2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/images/gameplay3.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+            
+        <p class="text-arrow" style="color: aqua;">Next</p>
+        <a href="#section3" class=""><i class="arrow down"></i></a>    
+        </div>
+        
+    </div>
+
+      <!-- Section 3 -->
+      <div id="section3">
+        <div class="d-flex bd-highlight mb-3 ">
+        <div style="flex-direction:column;">
+            <h1>What's so special?</h1>
+            <h3>Game Custom </h3>
+            <br>
+            <h3 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+              Tradtitional Game</h3>
+              <p>If you miss your childhood</p>
+          </div>
+          
+        </div>
+        
+        <p class="center-bottom text-arrow" style="color: aqua;">Next</p>
+        <a href="#section4" class="center-bottom"><i class="arrow down"></i></a>
+      </div>
+
+      <!-- Section 4 -->
+      <div id="section4">
+        <div>
+          <h1>System Requirements</h1>
+        </div>
+        <table class="table text">
+          <tbody>
+            <tr>
+              <td>OS :<P>Windows 7 64-bit only</P></td>
+              <td>PROCESSOR : <p>Intel Core 2 Duo@2.4 GHZ or AMD Athlon X2@2.8GHZ</p></td>
+            </tr>
+            <tr>
+              <td>MEMORY <p>4GB RAM</p></td>
+              <td>STORAGE : <p>8GB Available space</p></td>
+            </tr>
+            <tr>
+              <td>@GRAPHICS <p>NVDIA GE FORCE GTX 660 2GB or AMD Radeon HD 7850 2GB DirectX11(Shader model 5)</p></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="center-bottom text-arrow" style="color: aqua; padding-top: 100px;">Next</p>
+        <a href="#section5" class="center-bottom"><i class="arrow down"></i></a>
+      </div>
+
+      <!-- Section 5 -->
+      <div id="section5" class="d-flex flex-row bd-highlight center">
+        <div class="center">
+          <h1>TOP SCORES</h1>
+          <p>This top scores from multiplayer provided from the game.</p>
+          
+          <a href="topscore.html"><button type="button" class="btn btn-warning">See More</button></a>
+        </div>
+        <div class="center">
+          <div class="card" style="width: 18rem;padding: 5px;">
+            <div class="card-body bg-primary">
+              <h5 class="card-title"><img src="/images/randombg.jpg"  alt="Avatar" style="border-radius: 50%; width:100px; height:100px;"></h5>
+              <h6 class="card-subtitle mb-2 text-muted">ProGamer888</h6>
+              <p class="card-text">Gamenya sangat seru, pokonya mantap.</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;padding: 5px;">
+            <div class="card-body bg-primary">
+              <h5 class="card-title"><img src="/images/randombg.jpg"  alt="Avatar" style="border-radius: 50%; width:100px; height:100px;"></h5>
+              <h6 class="card-subtitle mb-2 text-muted">TheCangkem99</h6>
+              <p class="card-text">Gamenya mantaplah, banyak momen pokoknya.</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;padding: 5px;">
+            <div class="card-body bg-primary">
+              <h5 class="card-title"><img src="/images/randombg.jpg"  alt="Avatar" style="border-radius: 50%; width:100px; height:100px;"></h5>
+              <h6 class="card-subtitle mb-2 text-muted">PlayerToxic36</h6>
+              <p class="card-text">Chuakss</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- Section 6 -->
+<div id="section6"style="display:flex">
+  <div class="center">
+    <h1>SUBSCRIBE FOR OUR NEWS</h1>
+    <p>In order to start receiveing our news, you have to enter your email address. </p>
+    <p>We will send you informations about our games, we don't spam</p>
+    <div class="container p-4 pb-0">
+      <section class="">
+        <form action="">
+          <div class="d-flex justify-content-center">
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Sign up for our newsletter</strong>
+              </p>
+            </div>
+            <div class="col-md-5 col-12">
+              <div class="form-outline mb-4">
+                <input type="email" id="form5Example2" class="form-control" />
+                <label class="form-label" for="form5Example2">Email Address</label>
+              </div>
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-4">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+  
+  </div>
+</div>
+      
+      <footer class="text-center text-lg-start text" style="background-color: #1c2331; height: 200px;" id="footer">
+             <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
+               <div class="me-5">
+                 <span>Get connected with us</span>
+                 
+               </div>
+               <p>
+                <a href="" target="_blank">
+                  <img src="http://www.iconarchive.com/download/i54037/danleech/simple/facebook.ico" alt="Facebook Logo" class="facebook-icon"></a>
+             </p>
+             <p>
+              <a href="#" target="_blank"></a>
+              <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" alt="Twitter Logo" class="twitter-icon"></a>
+             </p>
+             <p>
+              <a href="#" target="_blank">
+                <img src="https://www.mchenryvillage.com/images/instagram-icon.png" alt="Instagram Logo" class="instagram-icon"></a>
+             </p>
+               <div>
+                 <a href="" class="text-white me-4">
+                   <i class="fab fa-facebook-f"></i>
+                 </a>
+                 <a href="" class="text-white me-4">
+                   <i class="fab fa-twitter"></i>
+                 </a>
+                 <a href="" class="text-white me-4">
+                   <i class="fab fa-google"></i>
+                 </a>
+                 <a href="" class="text-white me-4">
+                   <i class="fab fa-instagram"></i>
+                 </a>
+                 <a href="" class="text-white me-4">
+                   <i class="fab fa-linkedin"></i>
+                 </a>
+                 <a href="" class="text-white me-4">
+                   <i class="fab fa-github"></i>
+                 </a>
+               </div>
+               
+             </section>
+       
+             
+             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+               © 2023 Copyright:
+               <a class="text" href="https://mdbootstrap.com/">SomanGame.com</a>
+             </div>
+          </footer>
+         
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+
+  </body>
+</html>

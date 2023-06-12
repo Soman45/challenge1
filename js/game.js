@@ -1,126 +1,67 @@
 function game() {
-	let playerScore = 0;
-	let computerScore = 0;
-	let moves = 0;
+	function playGame() {
+	  const moveButtons = document.querySelectorAll('.move-btn');
+	  const result = document.querySelector('.result');
+  
+	//   const moves = ['rock', 'paper', 'scissors'];
+	  const commoves = ['rockcom', 'papercom', 'scissorscom'];
+  
+	  moveButtons.forEach(function (button) {
+		button.addEventListener('click', function () {
+		  const playerMove = button.getAttribute('data-value');
+		  const computerMove = getRandomMove();
+  
+		  displayMoves(playerMove, computerMove);
+		  determineWinner(playerMove, computerMove);
+		  gameOver();
+		});
+	  });
+  
+	  function getRandomMove() {
+		const randomIndex = Math.floor(Math.random() * commoves.length);
+		return commoves[randomIndex];
+	  }
+  
+	  function displayMoves(playerMove, computerMove) {
+		const playerMoveBtn = document.querySelector('.move-btn[data-value="' + playerMove + '"]');
+   	 	const computerMoveBtn = document.querySelector('.computer-move-btn[data-value="' + computerMove + '"]');
 
+    	playerMoveBtn.classList.add('selected');
+    	computerMoveBtn.classList.add('selected-computer');
+	  }
+  
+	  function determineWinner(playerMove, computerMove) {
+		if (
+			(playerMove === "rock" && computerMove === "rockcom") ||
+			(playerMove === "paper" && computerMove === "papercom") ||
+			(playerMove === "scissors" && computerMove === "scissorscom")
+		  ) {
+			result.textContent = "Seri";
+		} else if (
+		  (playerMove === 'rock' && computerMove === 'scissorscom') ||
+		  (playerMove === 'paper' && computerMove === 'rockcom') ||
+		  (playerMove === 'scissors' && computerMove === 'papercom')
+		) {
+		  result.textContent = 'Kamu Menang!';
+		} else {
+		  result.textContent = 'Computer Menang!';
+		}
+	  }
 
-	function playGame(){
-		const rockBtn = document.querySelector('.rock');
-		const paperBtn = document.querySelector('.paper');
-		const scissorBtn = document.querySelector('.scissor');
-		const playerOptions = [rockBtn,paperBtn,scissorBtn];
-		const computerOptions = ['rock','paper','scissors'];
-		
-		// Function untuk main Game
-		playerOptions.forEach(function (option)  {
-			option.addEventListener('click',function (){
-				
-				// const movesLeft = document.querySelector('.sisa');
-				moves++;
-				
-				const choiceNumber = Math.floor(Math.random()*6);
-				const computerChoice = computerOptions[choiceNumber];
-				console.log(playerOptions)
-				console.log(computerChoice)
-				
-				// Function untuk menentukan pemenang
-				winner(this.innerText,computerChoice)
-				console.log(winner(this.innerText,computerChoice))
-				
-				if(moves == 1){
-					gameOver(playerOptions);
-				}
-
-			})
-		})
-		
 	}
-
-	function winner (player,computer) {
-		const rockBtn = document.querySelector('.rock');
-		const paperBtn = document.querySelector('.paper');
-		const scissorBtn = document.querySelector('.scissor');
-		const rockComBtn = document.querySelector('.rockcom');
-		const paperComBtn = document.querySelector('.papercom');
-		const scissorComBtn = document.querySelector('.scissorcom');
-		const result = document.querySelector('.result');
-		// player = player.toLowerCase();
-        // computer = computer.toLowerCase();
-		if(player === computer){
-			result.textContent = 'Seri'
-		}
-		 if(player == 'rock'){
-			rockBtn.style.color = "red";
-			if(computer == 'paper'){
-				paperComBtn.style.color = "red";
-				computerScore++;
-				console.log('Computer Menang')
-			}else{
-				playerScore++;
-				console.log('Player Menang')
-			}
-		}
-		else if(player == 'scissors'){
-			scissorBtn.style.color = "red";
-			if(computer == 'rock'){
-				rockComBtn.style.color = "red";
-				computerScore++;
-				console.log('Computer Menang')
-			}else{
-				playerScore++;
-				console.log('Player Menang')
-			}
-		}
-		else if(player == 'paper'){
-			paperBtn.style.color = "red";
-			if(computer == 'scissors'){
-				scissorComBtn.style.color = "red";
-				computerScore++;
-				console.log('Computer Menang')
-			}else{
-				playerScore++;
-				console.log('Player Menang')
-			}
-		}
-		// reloadBtn.innerText = 'Restart';
-		// reloadBtn.style.display = 'flex'
-		// reloadBtn.addEventListener('click',function() {
-		// 	window.location.reload();
-		// })
-	}	
-
+  
 	function gameOver() {
-		const result = document.querySelector('.result');
 		const reloadBtn = document.querySelector('.reload');
+		reloadBtn.innerHTML =
+		  '<img src="/assets/refresh.png" alt="" style="width:20px; height:20px;">';
+		reloadBtn.style.display = 'flex';
+		reloadBtn.addEventListener('click', () => {
+		  window.location.reload();
+		});
+	  }
 
-
-		if(playerScore > computerScore){
-			result.style.fontSize = '2rem';
-			result.innerText = 'Player Menang'
-			result.style.color = '#308D46';
-			console.log('Player Menang')
-		}
-		else if(playerScore < computerScore){
-			result.style.fontSize = '2rem';
-			result.innerText = 'Player Kalah';
-			result.style.color = 'red';
-			console.log('Computer Menang')
-		}
-		else{
-			result.style.fontSize = '2rem';
-			result.innerText = 'Seri';
-			result.style.color = 'grey';
-			console.log('Seri')
-		}
-		reloadBtn.innerHTML = '<img src="/assets/refresh.png" alt="" style="width:20px; height:20px;">';
-		reloadBtn.style.display = 'flex'
-		reloadBtn.addEventListener('click',() => {
-			window.location.reload();
-		})
-	}
-	
 	playGame();
-	
-}
-
-game();
+  }
+  
+  game();
+  

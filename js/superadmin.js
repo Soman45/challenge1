@@ -8,7 +8,7 @@ Router.post('/loginadmin', async (req, res) => {
     const Password = req.body.password;
     const user = registerData.users.find(user => user.username === Username && user.password === Password);
   if (user) {
-    res.redirect('userlist');
+    res.redirect('DataUser');
   } else {
     res.send('Username atau Password salah');
   }

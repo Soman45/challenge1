@@ -1,9 +1,9 @@
 {
   "users": [
     {
-      "nama": "dika",
-      "email": "dika@gmail.com",
-      "password": "dika"
+      "nama": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin"
     }
   ]
    

@@ -3,7 +3,7 @@ const user = require('../db/register.json');
 const Router = express.Router();
 const { datauser } = require('../models');
 // Login form submission
-Router.post('/login', async (req, res) => {
+Router.post('', async (req, res) => {
     const Username = req.body.nama;
     const Password = req.body.password;
     try{

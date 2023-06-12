@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/game.css">
+  <title>Rock Paper Scissor</title>
+</head>
+<body class="background">
+  <button type="button" class="button"><a href="/user-page">Kembali</a></button>
+  <section class="game">
+    <div class="title">Rock Paper Scissor</div>
+    <div class="grid-container">
+      <div class="options grid-item">
+        <h1 class="move">Player One: <%= playerOne %></h1>
+        <button class="move-btn player1-move-btn" data-value="rock"><img src="/assets/batu.png" alt="" class="image"></button>
+        <button class="move-btn player1-move-btn" data-value="paper"><img src="/assets/kertas.png" alt="" class="image"></button>
+        <button class="move-btn player1-move-btn" data-value="scissors"><img src="/assets/gunting.png" alt="" class="image"></button>
+      </div>
+      <div class="options grid-item">
+        <h1 class="move">Player Two: <%= playerTwo %></h1>
+        <button class="move-btn player2-move-btn" data-value="rock"><img src="/assets/batu.png" alt="" class="image"></button>
+        <button class="move-btn player2-move-btn" data-value="paper"><img src="/assets/kertas.png" alt="" class="image"></button>
+        <button class="move-btn player2-move-btn" data-value="scissors"><img src="/assets/gunting.png" alt="" class="image"></button>
+      </div>
+    </div>
+    <div class="result"></div>
+    <button class="reload"></button>
+  </section>
+  <script src="gamePvP.js"></script>
+</body>
+</html>

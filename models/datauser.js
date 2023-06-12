@@ -1,7 +1,5 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const {Model} = require('sequelize');
 const datauser = require('../seeders/datauser');
 module.exports = (sequelize, DataTypes) => {
   class Datauser extends Model {
@@ -24,9 +22,12 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'datauser',
-    // tableName: 'datauser',
+    tableName: 'datausers',
     updatedAt:false,
     underscored:true
   });
+  
   return Datauser;
 };
+
+
