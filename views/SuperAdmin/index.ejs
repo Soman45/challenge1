@@ -8,9 +8,10 @@
     <title>Document</title>
 </head>
 <body>
+  
     <div class="form">
       <form action="/loginadmin" method="post">
-        <p style="color: red;" <%- isWrong %>>Incorrect Username/Password</p>
+        <p style="color: red;" <%- isWrong %>>Harus menggunakan akun Admin!</p>
         <div class="title">Welcome</div>
         <div class="subtitle">Insert your account!</div>
         <div class="input-container ic1">
@@ -23,7 +24,8 @@
           <div class="cut"></div>
           <label for="lastname" class="placeholder">Password</label>
         </div>
-        <a href=""><button type="text" class="submit"> submit</button></a>    
+        <button type="text" class="submit"> submit</button>
+        <button type="button" class="submit"><a href="/home">Kembali</a></button>    
       </div>
       </form>
 </body>

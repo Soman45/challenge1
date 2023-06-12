@@ -24,15 +24,15 @@ router.post('/user-page', authoriztionCheck, mainController.LoginPage);
 router.get('/loginadmin', mainController.showLoginAdminPage);
 router.post('/loginadmin', mainController.LoginAdminPage);
 
-router.get('/DataUser', crudcontroller.showDataUserPage);
+router.get('/DataUser', authoriztionCheck, crudcontroller.showDataUserPage);
 
-router.get('/user/add', authoriztionCheck, crudcontroller.showDataUser);
-router.post('/user/add', authoriztionCheck, crudcontroller.addDataUser);
+router.get('/user/add',  crudcontroller.showDataUser);
+router.post('/user/add',  crudcontroller.addDataUser);
 
-router.get('/user/update', authoriztionCheck, crudcontroller.showUpdateDataUser);
-router.post('/user/update', authoriztionCheck, crudcontroller.updateDataUser);
+router.get('/user/update',  crudcontroller.showUpdateDataUser);
+router.post('/user/update',  crudcontroller.updateDataUser);
 
-router.post('/user/delete', authoriztionCheck, crudcontroller.deleteDataUser);
+router.post('/user/delete',  crudcontroller.deleteDataUser);
 
 router.get('/create-room', authoriztionCheck, game.showCreateRoomPage);
 router.post('/create-room', authoriztionCheck, game.createRoom);

@@ -83,7 +83,7 @@ class mainController {
             //Bikin token untuk otorisasi user
             const token = JWT.sign({ Username, id: userData.id }, process.env.JWT_SECRET, { expiresIn: '5m' });
             res.cookie('token', token, { maxAge: 300000  });
-            res.redirect('/user-page');
+            res.redirect('/user-page?username='+ Username);
 
             //untuk JSON
             // res.json({ success: true, message: 'Login successful' });
@@ -96,7 +96,7 @@ class mainController {
 
 
     static showLoginAdminPage(req, res){
-        res.render('SuperAdmin');
+        res.render('SuperAdmin', {isWrong: "hidden"});
     }
 
     static async LoginAdminPage(req, res){
@@ -121,8 +121,11 @@ class mainController {
               console.log('Stored hashed password:', userData.password);
               console.log('Input hashed password:', hashedPassword);
               console.log('Incorrect password');
-              return res.render('Login', { isWrong: "" });
+              return res.render('SuperAdmin', { isWrong: "" });
             }
+            //Bikin token untuk otorisasi user
+            const token = JWT.sign({ Username, id: userData.id }, process.env.JWT_SECRET, { expiresIn: '5m' });
+            res.cookie('token', token, { maxAge: 300000  });
             res.redirect('DataUser');
 
             //untuk JSON

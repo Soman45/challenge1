@@ -33,8 +33,7 @@ class crudcontroller {
           // ambil data dari body
           const { username, email, password, ...sisa } = req.body;
           // simpan data ke database
-          const {hashedPassword} = cryptojs.HmacSHA256(password, process.env.SECRET_LOGIN).toString();
-          const userData = await datauser.create({ username, email, password:hashedPassword }, { transaction });
+          const userData = await datauser.create({ username, email, password}, { transaction });
           await userhistory.create({ ...sisa, userId: userData.id }, { transaction });
           await transaction.commit();
           console.log(userData);
